@@ -1,0 +1,42 @@
+.tópicos {
+    background: var(--azul-degrade);
+    text-align: center;
+    padding: var(--padding-padrao1em) 0;
+}
+.tópicos__titulo {
+    color: var(--branco-padrao);
+    font-weight: calc(var(--peso-padrao) * 3);
+    margin-bottom: var(--padding-padrao1em);   
+}
+.tópicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tópicos__item{
+    margin: 2em 0.5em;
+}
+.tópicos__Link {
+    color: var(--branco-padrao);
+    padding: var(--padding-padrao1em);
+    background-color: var(--cor-destaque);
+    text-decoration: var(--padrao-display);
+    font-size: calc(var(--pixel-padrao) + 4px);
+    font-weight: calc(var(--peso-padrao) * 7);
+}
+/* versão tablet */
+@media screen and (min-width: 1024px) {
+    .tópicos__titulo {
+        font-size: var(--padrao-pixel24);
+    }
+    .tópicos__Link {
+        font-size: var(--padrao-pixel24);
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .tópicos {
+        padding: calc(var(--padding-padrao1em) * 3) 20vw; 
+    }
+ 
+}

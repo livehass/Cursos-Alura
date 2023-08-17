@@ -1,0 +1,147 @@
+.cabeçalho{
+    background-color: var(--branco-padrao);
+    display: flex;
+    justify-content: space-between;
+    position: relative;  
+}
+.cabeçalho__menu-hamburguer {
+    width: var(--padrao-pixel24);
+    height: var(--padrao-pixel24);
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container__botao:checked ~ .container__rotulo >  .cabeçalho__menu-hamburguer {
+    background-image: url("/img/MenuAberto.svg");
+}
+.container__botao:checked ~ .container__rotulo {
+    background: var(--azul-degrade);
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.container__imagem {
+    padding: var(--padding-padrao1em);
+}
+.lista-menu {
+    display: var(--padrao-display);
+    position: absolute;
+    top: 100%; 
+    width:60vw;                                                                      
+}
+ .container__botao{ /*retirar se for ultilizar o botao  */
+    display: var(--padrao-display);
+}
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+.lista-menu__titulo{
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+.lista-menu__titulo, 
+.lista-menu__item {
+    padding: var(--padding-padrao1em);
+    background-color: var(--branco-padrao);   
+}
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;   
+}
+.container__titulo {
+    display: var(--padrao-display);
+}
+/* quando estiver abaixo do tamanho de 1024 o container titulo some */
+.catainer__titulo {
+    display: var(--padrao-display);
+}
+.opções {
+    display: var(--padrao-display);
+}
+/*opções do media querie para não aparecerem*/
+.container__texto {
+    display: var(--padrao-display);
+}
+/* versão tablet */
+@media screen and (min-width: 1024px) {
+    .container__titulo, .container__titulo--negrito {
+       font-family: var(--fonte-segundaria);
+       font-size: 30px
+    }
+    .container__botao{
+        display: var(--padrao-display);
+    }
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+    .opções {
+        display: flex;
+        margin-top: 2.3em;
+    }
+    .opções__item {
+        padding: 0 var(--padding-padrao1em);
+        text-transform: uppercase;
+    }
+    .opções__link {
+        text-decoration: none;
+        color: var(--preto-padrao);
+    }
+    .container__imagem-transparente {
+        display: var(--padrao-display);
+    }
+    .cabeçalho__menu-hamburguer {
+        display: var(--padrao-display);
+    }
+   .opções__botão:checked ~ .lista-menu {
+        display: block;
+        width: 15%;
+    }
+    .opções__botão {
+        display: var(--padrao-display);
+    }
+    .opções__botão:checked ~ .opçoes__rotulo > .opções__item{
+        background: var(--azul-degrade);
+        color: var(--branco-padrao);
+    }
+    .opções__item {
+        padding: 2em var(--padding-padrao1em);
+    }
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+
+    }
+    .lista-menu__item:hover > .lista-menu__link{
+        -webkit-text-fill-color:  var(--branco-padrao);
+        text-decoration: var(--padrao-display); 
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .cabeçalho{
+        padding: 0 2em;
+    }
+    .opções { /*colocamos a margin auto, para preencher toda a direita com o margin, assim jogando a lista toda do cabeçalho para esquerda*/
+        margin-right: auto;
+    }
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto-padrao);
+    }
+    .container__texto {
+        display: block;
+        font-size: 20px;
+        
+    }
+    
+}

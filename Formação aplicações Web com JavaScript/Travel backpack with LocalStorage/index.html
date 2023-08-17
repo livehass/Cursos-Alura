@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel backpack</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/backpack.ico"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<body>
+    <h1 class="h1">Travel Backpack, choose the itens you will carry</h1>
+    <main class="container">
+        <div class="principal">
+            <div class="backpack"></div>
+            <form action="add" class="add" id="newItem">
+                <label for="item">New Item:</label>
+                <input placeholder="Red shirt" type="text" name="name" id="name">
+                <label for="item">Quantity:</label>
+                <input placeholder="0" type="number" name="quantity" id="quantity">
+                <input type="submit" value="Send" class="send">
+            </form>
+            <!-- <input type="submit" value="Import my itens" class="send2" id="send2"> -->
+            <input type="submit" value="Import my itens" class="send2" id="send2">
+        </div>
+        
+        <ul class="list" id="list"></ul>  
+           
+    </main>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/import-itens.js"></script>
+
+</body>
+</html>
